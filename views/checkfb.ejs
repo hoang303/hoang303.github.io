@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <base href="/" />
+    <meta charset="utf-8">
+    <link rel="shortcut icon"
+    href="/favicon.ico">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Kiểm tra đăng kí FB</title>
+    <link rel="stylesheet"
+        href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic">
+    <link rel="stylesheet"
+        href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet"
+        href="assets/fonts/ionicons.min.css">
+    <link rel="stylesheet"
+        href="assets/css/styles.min.css">
+</head>
+
+<body class="text-dark">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/"><span class="text-primary">Trang chủ</span></a></li>
+        <li class="breadcrumb-item"><a><span>Tool kiểm tra đăng kí fb</span></a></li>
+    </ol>
+    <div class="card-group">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Nhập thông tin</h4>
+                <form><label>Nhập danh sách mail cần check &nbsp;:</label>
+                    <div class="form-group"><textarea class="bg-dark shadow form-control textareaInput"
+                            rows="20"
+                            cols="2"
+                            placeholder="Nhập mỗi dòng một mail nha :))"></textarea></div>
+                </form><button class="btn btn-outline-success btn-block text-dark float-right"
+                    id="btnCheck"
+                    type="button">Kiểm tra nào !</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Kết quả</h4>
+                    <button class="btn btn-light"
+                        id="copy_q"
+                        data-clipboard-target="#result">
+                        Copy to clipboard
+                    </button>
+                <form>
+                    <div class="form-group"><label class="text-success ml-sm-auto">Sống lượng mail đã đăng kí
+                            FB : <div id="registered"
+                                style="display:inline-block">000</div> &nbsp;</label><label
+                            class="text-danger">Số lượng chưa đăng kí FB : <div style="display:inline-block"
+                                id="noRegistered">000</div></label><textarea
+                            class="bg-dark shadow-lg form-control textareaInput"
+                            rows="20"
+                            cols="2"
+                            id="result"
+                            style="color: lawngreen;"
+                           ></textarea></div>
+                    <div class="form-group"><label></label></div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="assets/js/script.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://cdn.rawgit.com/zenorocha/clipboard.js/v2.0.4/dist/clipboard.min.js"></script>
+    <script src="assets/js/checkfb.js"></script>
+</body>
+
+</html>

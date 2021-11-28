@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <base href="/" />
+    <link rel="shortcut icon"
+    href="/favicon.ico">
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Lấy mail ngẫu nhiên</title>
+    <link rel="stylesheet"
+        href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic">
+    <link rel="stylesheet"
+        href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet"
+        href="assets/fonts/ionicons.min.css">
+    <link rel="stylesheet"
+        href="assets/css/styles.min.css">
+</head>
+
+<body class="text-dark">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/"><span class="text-primary">Trang chủ</span></a></li>
+        <li class="breadcrumb-item"><a><span>Tool lấy mail ngẫu nhiên</span></a></li>
+    </ol>
+    <div class="card-group">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Nhập thông tin</h4>
+                <form><label>Ramdom mail trong các kí tự :</label>
+                    <div class="form-group"><input class="form-control"
+                            type="text"
+                            id="keys"
+                            value="qwertyuiopasdfghjklzxcvbnm"></div>
+                    <div class="form-group"><select class="form-control"
+                            id="hostSelect"
+                            name="select-host">
+                            <option value="@hotmail.com"
+                                selected="">@hotmail.com</option>
+                            <option value="@outlook.com">@outlook.com</option>
+                            <option value="@outlook.com.vn">@outlook.com.vn</option>
+                            <option value="@yahoo.com">@yahoo.com</option>
+                            <option value="@gmail.com">@gmail.com</option>
+                        </select></div>
+                    <div class="form-group">
+                        <label> Số lượng cần lấy : </label>
+                        <input class="form-control"
+                            type="number"
+                            id="total"
+                            value=20
+                            min=0></div>
+                            <label for=""> Độ dài phần tên mail : </label>
+                            <div class="row">
+                               
+                                <div class="col-4">
+                                    <div class="form-group">
+                                      <label for=""> Min </label>
+
+                                      <input type="number"
+                                      value=5
+                                        class="form-control" name="" id="length_min"  placeholder="">
+                                   
+                                    </div>
+                                </div>
+                            
+                                <div class="col-4">
+                                    <div class="form-group">
+                                        <label for="">Max</label>
+                                        <input type="number" value=8
+                                            class="form-control"
+                                            name=""
+                                            id="length_max"
+                                           
+                                            placeholder="">
+                                       
+                                    </div>
+                                </div>
+                            </div>
+                    <div class="form-group"><input type="checkbox"
+                            name="use_number"
+                            id="useNumber"><label>&nbsp; &nbsp; &nbsp; Dùng kí tự là số trong mail
+                            ?</label></div>
+                </form><a class="btn btn-success btn-block text-dark float-right"
+   
+                    id="btnGet">Nhận mail</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Kết quả</h4>
+                <div>
+                    <div class="form-group">
+                        <div class="btn-group"  >
+                        <button class="btn btn-light"
+                              id="copy_q"
+                            data-clipboard-target="#result">
+                            Copy to clipboard
+                         </button>
+                           <button class="btn btn-light" 
+                             id="delete" >
+                             Xóa tất cả
+                           </button>
+                        </div>
+                        
+                        <textarea id="result" style="margin-top:20px;"
+                            class="bg-dark form-control form-control-lg textareaInput"
+                            rows="20"
+                            cols="2"
+                            readonly=""></textarea></div>
+                        </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+   
+    <script src="assets/js/script.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://cdn.rawgit.com/zenorocha/clipboard.js/v2.0.4/dist/clipboard.min.js"></script>
+
+    <script src="assets/js/getmail.js"></script>
+</body>
+
+</html>
